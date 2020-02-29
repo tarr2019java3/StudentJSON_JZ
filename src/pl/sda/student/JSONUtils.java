@@ -28,6 +28,8 @@ public class JSONUtils {
                 Student[].class);
         for(Student stu: students) {
             System.out.println(stu.getName());
+            System.out.println(stu.getLastname());
+            System.out.println(stu.getIndex());
         }
 
         } catch (IOException e) {

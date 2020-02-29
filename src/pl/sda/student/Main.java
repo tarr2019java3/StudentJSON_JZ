@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -17,8 +19,15 @@ public class Main {
         // serializacja - np. obiektu do JSON-a
 
         ObjectMapper objectMapper = new ObjectMapper();
+        List<Student> studentList = new ArrayList<>();
+        studentList.add(student);
+       studentList.add(student);
+       studentList.add(student);
+
 
         try {
+       objectMapper.writeValue(new File("student_lista.json"), studentList);
+
             objectMapper.writeValue(new File("student.json"),student);
             objectMapper.writeValue(new File("student1.json"), student1);
             objectMapper.writeValue(new File("student2.json"), student2);

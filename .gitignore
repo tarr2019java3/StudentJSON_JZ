@@ -1,3 +1,4 @@
 .idea
 out
 *.iml //dowolne ciągi znaków kończące się na iml
+target
